@@ -25,3 +25,8 @@ class TestAdd:
     def test_str(self,fixt):
         res = add('1', '3')
         assert res == '13'
+
+    @pytest.mark.web
+    def test_str(self,fixt):
+        res = add('1', '3')
+        assert res == '13'
