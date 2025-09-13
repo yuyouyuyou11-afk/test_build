@@ -5,6 +5,14 @@ import pytest
 from typing import Generator, Any
 
 
+import logging
+import pytest
+
+@pytest.fixture(autouse=True)
+def setup_logging():
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+    yield
+
 
 
 @pytest.fixture(scope='session')
